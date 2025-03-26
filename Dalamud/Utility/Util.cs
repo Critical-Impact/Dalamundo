@@ -497,6 +497,7 @@ public static class Util
         return Encoding.UTF8.GetString(mso.ToArray());
     }
 
+
     /// <summary>
     /// Determine if Dalamud is currently running within a Wine context (e.g. either on macOS or Linux). This method
     /// will not return information about the host operating system.
