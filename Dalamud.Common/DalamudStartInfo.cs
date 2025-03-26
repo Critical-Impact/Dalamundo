@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using Dalamud.Common.Game;
 using Newtonsoft.Json;
 
@@ -16,7 +15,7 @@ public record DalamudStartInfo
     /// </summary>
     public DalamudStartInfo()
     {
-        this.Platform = OSPlatform.Create("UNKNOWN");
+        // ignored
     }
 
     /// <summary>
@@ -58,12 +57,6 @@ public record DalamudStartInfo
     /// Gets or sets the language of the game client.
     /// </summary>
     public ClientLanguage Language { get; set; } = ClientLanguage.English;
-
-    /// <summary>
-    /// Gets or sets the underlying platform�Dalamud runs on.
-    /// </summary>
-    [JsonConverter(typeof(OSPlatformConverter))]
-    public OSPlatform Platform { get; set; }
 
     /// <summary>
     /// Gets or sets the current game version code.

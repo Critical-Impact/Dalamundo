@@ -1,5 +1,4 @@
 #include "pch.h"
-#include "DalamudStartInfo.h"
 
 #include "utils.h"
 
@@ -583,10 +582,6 @@ std::vector<std::string> utils::get_env_list(const wchar_t* pcszName) {
     if (res.size() == 1 && res[0].empty())
         return {};
     return res;
-}
-
-bool utils::is_running_on_wine() {
-    return g_startInfo.Platform != "WINDOWS";
 }
 
 std::filesystem::path utils::get_module_path(HMODULE hModule) {

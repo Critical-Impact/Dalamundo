@@ -182,8 +182,7 @@ public sealed class EntryPoint
             // Apply common fixes for culture issues
             CultureFixes.Apply();
 
-            // Currently VEH is not fully functional on WINE
-            if (info.Platform != OSPlatform.Windows)
+            if (!Util.IsWine())
                 InitSymbolHandler(info);
 
             var dalamud = new Dalamud(info, fs, configuration, mainThreadContinueEvent);
